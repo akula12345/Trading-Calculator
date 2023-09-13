@@ -34,6 +34,7 @@ class LeverageInformationView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Private
     private func configureView() {
         leverageLabel = UILabel()
         leverageLabel.textColor = UIColor(red: 195/255, green: 182/255, blue: 128/255, alpha: 1)
@@ -72,6 +73,9 @@ class LeverageInformationView: UIView {
         descriptionTextView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
     }
     
+    // MARK: - Public
+    
+    /// Sets price for descriprion text view
     func setPrice(_ newPrice: Float) {
         price = newPrice
     }

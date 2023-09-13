@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
         setupViewController()
     }
     
@@ -79,6 +79,7 @@ class ViewController: UIViewController {
 
     }
     
+    /// Updates values for views containing a price to the current one in the calculator.
     private func updateValues() {
         btcCell.setPrice(calculator.getRate())
         ethCell.setPrice(calculator.getRate())

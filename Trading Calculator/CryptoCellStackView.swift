@@ -26,6 +26,7 @@ class CryptoCellStackView: UIStackView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Private
     private func configureCryptoCell(logoName: String, symbol: String, price: Float) {
         let logo = UIImage(named: logoName)
         let logoImageView = UIImageView(image: logo)
@@ -61,10 +62,14 @@ class CryptoCellStackView: UIStackView {
         favoriteCryptoCell.translatesAutoresizingMaskIntoConstraints = false
     }
     
+    // MARK: - Public
+    
+    /// Returns current price
     func getPrice() -> Float {
         return price
     }
     
+    /// Sets price for price label
     func setPrice(_ newPrice: Float) {
         price = newPrice
     }
